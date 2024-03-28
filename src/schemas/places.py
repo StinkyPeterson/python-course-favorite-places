@@ -30,3 +30,11 @@ class PlacesListResponse(ListResponse):
     """
 
     data: list[Place]
+
+
+class Description(BaseModel):
+    """
+    Схема данных для описания места.
+    """
+
+    description: Optional[str] = Field(None, min_length=3, max_length=255)
